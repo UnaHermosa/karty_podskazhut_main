@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
+  --main-font: Raleway, Arial, sans-serif;
+  --accent-font: 'STIX Two Text', Verdana, serif;
+}
+
 *,
 *::before,
 *::after {
@@ -7,6 +15,10 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--main-font);
+  font-weight: 400;
 }
 
 p,
@@ -19,4 +31,63 @@ ol,
 li,
 figure {
   margin: 0;
+}
+
+.content-section {
+  padding: 0 5vi;
+}
+
+.header {
+  padding-block-start: 10%;
+}
+
+.header__title {
+  margin-block-end: 40px;
+  font-family: var(--accent-font);
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  line-height: 0.9em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--accent-font);
+  font-weight: 600;
+  line-height: 0.9em;
+  text-align: center;
+}
+
+.content__title {
+  font-size: 30px;
+  margin-top: 7%;
+  margin-block-end: 2.5%;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__paragraph {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  margin-block-end: 1.5em;
+}
+
+.content__link{
+  color: inherit;
+}
+
+.content__blockquote {
+  inline-size: 75%;
+  margin: 0 auto;
+  margin-block-end: 1.5em;
+  font-size: 18px;
+  line-height: 2em;
+  font-style: italic;
 }
