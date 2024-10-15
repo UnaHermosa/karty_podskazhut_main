@@ -34,6 +34,20 @@ figure {
   margin: 0;
 }
 
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
 .content-section {
   padding: 0 5vi;
 }
@@ -72,6 +86,7 @@ figure {
   color: currentColor;
   cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 
 .header__theme-button:not([disabled]):hover {
@@ -234,4 +249,22 @@ figure {
   line-height: 1em;
   font-weight: 400;
   color: currentColor;
+}
+
+.footer {
+  margin-block-start: 10%;
+  padding-block-start: 2.5%;
+  padding-block-end: 2.5%;
+  border-block-start: 1px solid var(--text-color);
+  font: inherit;
+  line-height: 1em;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #b3b3b3;
+  --accent-color: transparent;
+
 }
