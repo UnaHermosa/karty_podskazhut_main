@@ -262,9 +262,30 @@ button:disabled {
   text-align: center;
 }
 
+/*Тёмная тема*/
+
 .theme_dark {
   --bg-color: #171717;
   --text-color: #b3b3b3;
   --accent-color: transparent;
+}
 
+.theme_dark .header__theme-button_is-active::after {
+  background-color: transparent;
+  background-image: url(../images/pattern.svg);
+  background-position: center;
+}
+
+.theme_dark .content__text-block_type_first-lettered 
+.content__paragraph:first-of-type::first-letter {
+  border: 1px solid currentColor;
+}
+
+.theme_dark .colored-text::after {
+  background-image: url(../images/pattern.svg);;
+  background-position: center;
+}
+
+.theme_dark .content__item::before {
+  background-image: url(../images/marker-dark.svg);
 }
